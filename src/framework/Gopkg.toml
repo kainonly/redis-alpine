@@ -1,0 +1,6 @@
+required = ["github.com/kataras/iris"]
+
+[prune]
+  go-tests = true
+  unused-packages = true
+
