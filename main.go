@@ -1,8 +1,7 @@
 package main
 
 import (
-	"framework/app/api"
-	"framework/app/system"
+	"framework/api"
 	"framework/facade"
 	"github.com/go-redis/redis"
 	"github.com/kataras/iris"
@@ -22,7 +21,7 @@ func main() {
 		DB:       0,
 	})
 
-	system.Set(app)
-	api.Set(app)
+	facade.Register()
+	api.Register()
 	app.Run(iris.Addr(":80"))
 }
