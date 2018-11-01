@@ -1,4 +1,4 @@
-package system
+package api
 
 import (
 	"github.com/iris-contrib/middleware/cors"
@@ -6,8 +6,8 @@ import (
 	"github.com/kataras/iris/mvc"
 )
 
-func Set(app *iris.Application) {
-	m := mvc.New(app.Party("system",
+func Register(app *iris.Application) {
+	m := mvc.New(app.Party("api",
 		cors.New(cors.Options{
 			AllowedOrigins:   []string{"*"},
 			AllowCredentials: true,
