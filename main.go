@@ -1,13 +1,13 @@
 package main
 
 import (
+	"framework/app/api"
+	"framework/app/system"
 	"framework/facade"
 	"github.com/go-redis/redis"
-	"github.com/iris-contrib/middleware/cors"
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/middleware/logger"
 	"github.com/kataras/iris/middleware/recover"
-	"github.com/kataras/iris/mvc"
 )
 
 func main() {
@@ -22,12 +22,7 @@ func main() {
 		DB:       0,
 	})
 
-	mvc.New(app.Party("system",
-		cors.New(cors.Options{
-			AllowedOrigins:   []string{"*"},
-			AllowCredentials: true,
-		}),
-	))
-
+	system.Set(app)
+	api.Set(app)
 	app.Run(iris.Addr(":80"))
 }
