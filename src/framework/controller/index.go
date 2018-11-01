@@ -1,8 +1,8 @@
 package controller
 
-type ExampleController struct{}
+type IndexController struct{}
 
-func (c *ExampleController) PostPing() interface{} {
+func (c *IndexController) PostPing() interface{} {
 	return map[string]map[string]string{"message": {
 		"name": "kain",
 	}}
