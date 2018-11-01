@@ -1,7 +1,6 @@
-package microbone
+package main
 
 import (
-	"framework/controller"
 	"framework/facade"
 	"github.com/go-redis/redis"
 	"github.com/iris-contrib/middleware/cors"
@@ -27,7 +26,8 @@ func main() {
 		cors.New(cors.Options{
 			AllowedOrigins:   []string{"*"},
 			AllowCredentials: true,
-		})),
-	).Handle(new(controller.ExampleController))
+		}),
+	))
+
 	app.Run(iris.Addr(":80"))
 }
