@@ -1,7 +1,6 @@
 package facade
 
 import (
-	"github.com/go-redis/redis"
 	"github.com/micro/go-config"
 	"github.com/micro/go-config/source/file"
 )
@@ -18,8 +17,8 @@ func Register() {
 		file.WithPath("./config.json"),
 	))
 	configs = c.Map()
-}
 
-func MvcShell() {
-
+	if configs["redis"] != nil {
+		useRedis(configs["redis"])
+	}
 }
