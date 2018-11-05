@@ -5,14 +5,12 @@ import (
 	"github.com/micro/go-config/source/file"
 )
 
-var configs map[string]interface{}
-
 func Register() {
-	c := config.NewConfig()
-	c.Load(file.NewSource(
+	source := config.NewConfig()
+	source.Load(file.NewSource(
 		file.WithPath("./config.yaml"),
 	))
-	configs = c.Map()
+	configs := source.Map()
 	// init redis facade
 	if configs["redis"] != nil {
 		useRedis(configs["redis"].(map[string]interface{}))
