@@ -13,7 +13,7 @@ func useRedis(ops map[string]interface{}) {
 		return
 	}
 	Redis = redis.NewClient(&redis.Options{
-		Addr:     ops["address"].(string),
+		Addr:     ops["host"].(string),
 		Password: ops["password"].(string),
 		DB:       db,
 	})

@@ -6,13 +6,13 @@ import (
 )
 
 func Register() {
-	source := config.NewConfig()
-	source.Load(file.NewSource(
-		file.WithPath("./config.yaml"),
+	env := config.NewConfig()
+	env.Load(file.NewSource(
+		file.WithPath("./env.yaml"),
 	))
-	configs := source.Map()
+	options := env.Map()
 	// init redis facade
-	if configs["redis"] != nil {
-		useRedis(configs["redis"].(map[string]interface{}))
+	if options["redis"] != nil {
+		useRedis(options["redis"].(map[string]interface{}))
 	}
 }
