@@ -1,0 +1,4 @@
+redis:
+  address: ""
+  password: ""
+  db: "0"

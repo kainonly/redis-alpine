@@ -7,18 +7,14 @@ import (
 
 var configs map[string]interface{}
 
-func Config(key string) string {
-	return configs[key].(string)
-}
-
 func Register() {
 	c := config.NewConfig()
 	c.Load(file.NewSource(
-		file.WithPath("./config.json"),
+		file.WithPath("./config.yaml"),
 	))
 	configs = c.Map()
-
+	// init redis facade
 	if configs["redis"] != nil {
-		useRedis(configs["redis"])
+		useRedis(configs["redis"].(map[string]interface{}))
 	}
 }
