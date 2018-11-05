@@ -10,7 +10,7 @@ var Redis *redis.Client
 func useRedis(ops map[string]interface{}) {
 	db, err := strconv.Atoi(ops["db"].(string))
 	if err != nil {
-		panic(err.Error())
+		return
 	}
 	Redis = redis.NewClient(&redis.Options{
 		Addr:     ops["address"].(string),
