@@ -11,7 +11,7 @@ func Register() {
 		file.WithPath("./env.yaml"),
 	))
 	options := env.Map()
-	// init redis facade
+	// redis facade
 	if options["redis"] != nil {
 		useRedis(options["redis"].(map[string]interface{}))
 	}
