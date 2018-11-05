@@ -1,10 +1,15 @@
 package main
 
 import (
+	"framework/cache"
 	"framework/facade"
 )
 
 func main() {
 	facade.Register()
-	println(facade.Config("name"))
+	str, err := cache.GetAdmin()
+	if err != nil {
+		println(err.Error())
+	}
+	println(str)
 }
