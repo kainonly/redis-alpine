@@ -13,7 +13,7 @@ func main() {
 	//}
 	//println(str)
 
-	db, err := gorm.Open("postgres", "host=127.0.0.1 port=5432 user=gorm dbname=postgres password=zt931003")
+	db, err := gorm.Open("postgres", "host=127.0.0.1 port=5432 user=gorm dbname=postgres password=123456")
 	if err != nil {
 		return
 	}
