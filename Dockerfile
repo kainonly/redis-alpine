@@ -1,8 +1,6 @@
-FROM alpine:edge
+FROM redis:alpine
 
-ENV VERSION 4.0.12
-
-RUN apk add --no-cache redis
+ENV VERSION 5.0.3
 
 COPY redis.conf /etc/redis.conf
 
