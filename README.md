@@ -1,9 +1,9 @@
 ## Redis-Alpine
 
-Redis minimalist custom image
+Redis custom image
 
-- size `6.56` mb
-- version `4.0.12`
+- size `40.9` mb
+- version `5.0.3`
 
 Docker Pull Command
 
@@ -17,7 +17,7 @@ Set docker-compose
 version: '3'
 services:
   redis:
-    image: kainonly/redis-alpine:4.0.12
+    image: kainonly/redis-alpine:5.0.3
     restart: always
     privileged: true
     sysctls:
