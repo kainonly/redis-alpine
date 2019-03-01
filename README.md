@@ -2,13 +2,10 @@
 
 Redis custom image
 
-- size `40.9` mb
-- version `5.0.3`
-
 Docker Pull Command
 
 ```shell
-docker pull kainonly/redis-alpine
+docker pull kainonly/redis-alpine:5.0.3
 ```
 
 Set docker-compose
