@@ -1,6 +1,16 @@
-## Redis-Alpine
+## Redis Alpine
 
+<<<<<<< Updated upstream
 Docker Pull Command 
+=======
+Configurable Redis Image
+
+![MicroBadger Size](https://img.shields.io/microbadger/image-size/kainonly/redis-alpine.svg?style=flat-square)
+![MicroBadger Layers](https://img.shields.io/microbadger/layers/kainonly/redis-alpine.svg?style=flat-square)
+![Docker Pulls](https://img.shields.io/docker/pulls/kainonly/redis-alpine.svg?style=flat-square)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/kainonly/redis-alpine.svg?style=flat-square)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/kainonly/redis-alpine.svg?style=flat-square)
+>>>>>>> Stashed changes
 
 ```shell
 docker pull kainonly/redis-alpine
