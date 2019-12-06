@@ -1,4 +1,4 @@
-FROM redis:5.0.6-alpine
+FROM redis:5.0.7-alpine
 
 COPY redis.conf /etc/redis.conf
 
